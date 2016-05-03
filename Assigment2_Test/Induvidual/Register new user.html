@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://demo.avactis.com/" />
+<title>Create new account</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Create new account</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://demo.avactis.com/4.7.9/index.php</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Sign In</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button.btn.btn-default</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>TestPassword1234</td>
+	<td>Password</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{&quot;TestUser_&quot; + Math.floor(Math.random()*10000)}</td>
+	<td>Name</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=customer_info[Customer][Email]</td>
+	<td>${Name}@gmail.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=customer_info[Customer][Password]</td>
+	<td>${Password}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=customer_info[Customer][RePassword]</td>
+	<td>${Password}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=customer_info[Customer][FirstName]</td>
+	<td>${Name}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=customer_info[Customer][LastName]</td>
+	<td>FancyLastName</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=customer_info_Customer_Country</td>
+	<td>label=Canada</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=customer_info_Customer_State</td>
+	<td>label=Nova Scotia</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=customer_info[Customer][ZipCode]</td>
+	<td>1354</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=customer_info[Customer][City]</td>
+	<td>Nova</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=customer_info[Customer][Streetline1]</td>
+	<td>NovaStreet 12</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=customer_info[Customer][Streetline2]</td>
+	<td>Corner of Scotia</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=customer_info[Customer][Phone]</td>
+	<td>4578951354</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='Register']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.note.note-success</td>
+	<td>Account created successfully. You are now registered.</td>
+</tr>
+</tbody></table>
+</body>
+</html>
